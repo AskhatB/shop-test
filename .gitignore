@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+# IDEA
+/.vscode
+/.idea
+
 # testing
 /coverage
 
