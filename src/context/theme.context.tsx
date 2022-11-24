@@ -37,6 +37,6 @@ export const ThemeContextProvider: FC<{ children: ReactNode }> = ({
 
 export const useThemeContext = (): ThemeContextContextValues => {
   const ctx = useContext(ThemeContext);
-  if (!ctx) throw new Error("Attempt to use gesture context outside its scope");
+  if (!ctx) throw new Error("outside its scope");
   return ctx;
 };
