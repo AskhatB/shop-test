@@ -1,6 +1,8 @@
 import { FC, ReactElement } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { IProduct } from "../../../../types/product.types";
+import { StyledContainer } from "../../../../style/common.style";
+import Loader from "../../../../components/loader";
 import {
   StyledProductInfoWrapper,
   StyledProductInfoImage,
@@ -17,28 +19,30 @@ type ProductInfoProps = {
 };
 
 const ProductInfo: FC<ProductInfoProps> = ({ product }): ReactElement => {
-  if (!product) return <div>loading...</div>;
+  if (!product) return <Loader />;
 
   return (
-    <StyledProductInfoWrapper>
-      <StyledProductInfoImage>
-        <img src={product.image} alt={product.title} />
-      </StyledProductInfoImage>
-      <StyledProductInfoTitle>{product.title}</StyledProductInfoTitle>
-      <StyledProductInfoPrice>{product.price}$</StyledProductInfoPrice>
-      <StyledProductCardMinorInfo>
-        <StyledProductCardSold>
-          {product.rating.count} sold
-        </StyledProductCardSold>
-        <StyledProductCardRating>
-          {product.rating.rate} <AiFillStar />
-        </StyledProductCardRating>
-      </StyledProductCardMinorInfo>
-      <StyledProductCardDescription>
-        <h3>Описание</h3>
-        <p>{product.description}</p>
-      </StyledProductCardDescription>
-    </StyledProductInfoWrapper>
+    <StyledContainer>
+      <StyledProductInfoWrapper>
+        <StyledProductInfoImage>
+          <img src={product.image} alt={product.title} />
+        </StyledProductInfoImage>
+        <StyledProductInfoTitle>{product.title}</StyledProductInfoTitle>
+        <StyledProductInfoPrice>{product.price}$</StyledProductInfoPrice>
+        <StyledProductCardMinorInfo>
+          <StyledProductCardSold>
+            {product.rating.count} sold
+          </StyledProductCardSold>
+          <StyledProductCardRating>
+            {product.rating.rate} <AiFillStar />
+          </StyledProductCardRating>
+        </StyledProductCardMinorInfo>
+        <StyledProductCardDescription>
+          <h3>Описание</h3>
+          <p>{product.description}</p>
+        </StyledProductCardDescription>
+      </StyledProductInfoWrapper>
+    </StyledContainer>
   );
 };
 
