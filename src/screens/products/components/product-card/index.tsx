@@ -27,10 +27,14 @@ const ProductCard: FC<ProductCardProps> = ({
         <StyledProductCardImage>
           <img src={image} alt={title} />
         </StyledProductCardImage>
+
         <StyledProductCardTitle>{title}</StyledProductCardTitle>
+
         <StyledProductCardPrice>{price}$</StyledProductCardPrice>
+
         <StyledProductCardMinorInfo>
           <StyledProductCardSold>{rating.count} sold</StyledProductCardSold>
+
           <StyledProductCardRating>
             {rating.rate} <AiFillStar />
           </StyledProductCardRating>

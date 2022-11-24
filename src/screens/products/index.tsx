@@ -3,6 +3,7 @@ import ProductsLayout from "../../layouts/products";
 import { IProduct } from "../../types/product.types";
 import { getProducts } from "../../api/products.api";
 import Products from "./components/products";
+import TopControls from "./components/top-controls";
 
 const ProductsScreen: FC = (): ReactElement => {
   const [products, setProducts] = useState<IProduct[]>();
@@ -18,6 +19,7 @@ const ProductsScreen: FC = (): ReactElement => {
 
   return (
     <ProductsLayout>
+      <TopControls />
       <Products products={products} />
     </ProductsLayout>
   );

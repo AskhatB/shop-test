@@ -1,5 +1,6 @@
 import { FC, ReactElement } from "react";
 import { IProduct } from "../../../../types/product.types";
+import { StyledContainer } from "../../../../style/common.style";
 import ProductCard from "../product-card";
 import { StyledProducts } from "./styles";
 
@@ -11,11 +12,13 @@ const Products: FC<ProductsProps> = ({ products }): ReactElement => {
   if (!products) return <div>loading...</div>;
 
   return (
-    <StyledProducts>
-      {products.map((product) => (
-        <ProductCard {...product} />
-      ))}
-    </StyledProducts>
+    <StyledContainer>
+      <StyledProducts>
+        {products.map((product) => (
+          <ProductCard key={product.id} {...product} />
+        ))}
+      </StyledProducts>
+    </StyledContainer>
   );
 };
 

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const request = axios.create({
-  baseURL: "https://fakestoreapi.com",
+  baseURL: process.env.REACT_APP_API,
 });
 
 request.interceptors.response.use(

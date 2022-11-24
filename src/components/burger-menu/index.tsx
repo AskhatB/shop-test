@@ -10,12 +10,16 @@ const BurgerMenu: FC = (): ReactElement => {
     setIsOpen(true);
   };
 
+  const closeMenu = (): void => {
+    setIsOpen(false);
+  };
+
   return (
     <StyledBurgerMenuWrapper>
       <StyledBurgerMenuButton onClick={openMenu}>
         <GiHamburgerMenu />
       </StyledBurgerMenuButton>
-      <Menu isOpen={isOpen} />
+      <Menu isOpen={isOpen} close={closeMenu} />
     </StyledBurgerMenuWrapper>
   );
 };

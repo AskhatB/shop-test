@@ -1,7 +1,8 @@
 import { FC, ReactElement } from "react";
-import { StyledTopbarWrapper } from "./styles";
 import Search from "../search";
 import BurgerMenu from "../burger-menu";
+import { StyledTopbarWrapper, StyledTopbar } from "./styles";
+import { StyledContainer } from "../../style/common.style";
 
 const Topbar: FC = (): ReactElement => {
   const onSearch = (value: string): void => {
@@ -10,8 +11,12 @@ const Topbar: FC = (): ReactElement => {
 
   return (
     <StyledTopbarWrapper>
-      <Search onSearch={onSearch} />
-      <BurgerMenu />
+      <StyledContainer>
+        <StyledTopbar>
+          <Search onSearch={onSearch} />
+          <BurgerMenu />
+        </StyledTopbar>
+      </StyledContainer>
     </StyledTopbarWrapper>
   );
 };

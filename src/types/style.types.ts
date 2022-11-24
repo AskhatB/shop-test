@@ -1,3 +1,3 @@
-import { theme } from "../style/theme.style";
+import { themeDark, themeLight } from "../style/theme.style";
 
-export type StyleThemeType = typeof theme;
+export type StyleThemeType = typeof themeDark & typeof themeLight;
