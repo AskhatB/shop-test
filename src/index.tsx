@@ -4,8 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
-import { ContextProvider } from "./context";
-import { StyleProvider } from "./style";
+import { StyleProvider, ContextProvider } from "./providers";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

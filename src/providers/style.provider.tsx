@@ -1,7 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { ThemeProvider } from "styled-components";
-import { themeDark, themeLight } from "./theme.style";
-import { GlobalStyle } from "./global.style";
+import { themeDark, themeLight } from "../style/theme.style";
+import { GlobalStyle } from "../style/global.style";
 import { useThemeContext } from "../context/theme.context";
 
 export const StyleProvider: FC<{ children: ReactNode }> = ({ children }) => {

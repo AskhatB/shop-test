@@ -1,5 +1,5 @@
 import { ReactNode, FC } from "react";
-import { ThemeContextProvider } from "./theme.context";
+import { ThemeContextProvider } from "../context/theme.context";
 
 export const ContextProvider: FC<{
   children: ReactNode;
